@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/body_color"
+    android:layout_height="match_parent">
+
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ImageView
+        android:id="@+id/toolbar_img"
+        android:layout_width="match_parent"
+        android:src="@mipmap/main_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_height="70dp" />
+
+    <include
+        android:id="@+id/tab"
+        layout="@layout/include_bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true" />
+    <ImageView
+        android:id="@+id/iv_video"
+        android:layout_width="50dp"
+        android:src="@mipmap/video"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp" />
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginBottom="-10dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray"/>
+
+</RelativeLayout>

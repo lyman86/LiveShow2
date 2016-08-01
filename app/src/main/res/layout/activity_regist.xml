@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lyman="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/body_color"
+    android:orientation="vertical">
+
+    <com.lly.app.liveshow.custom.CustomSelectItem
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/title_bg"
+        lyman:centerTextColorSelect="@color/title_text_bg"
+        lyman:centerTextSelect="@string/regist_custom_title"
+        lyman:centerTextSizeSelect="20sp"
+        lyman:centerTypeSelect="text"
+        lyman:leftImagePaddingLeftSelect="10dp"
+        lyman:leftImageSourceSelect="@mipmap/back_gray"
+        lyman:leftTypeSelect="image" />
+
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:textColorHint="@color/text_hint_color"
+        android:inputType="number"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edt_bg"
+        android:drawableLeft="@mipmap/phone_regist"
+        android:drawablePadding="10dp"
+        android:hint="@string/regist_edt_user_name"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edt_bg"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:textColorHint="@color/text_hint_color"
+        android:drawableLeft="@mipmap/suo_regist"
+        android:drawablePadding="10dp"
+        android:hint="@string/regist_edt_user_password"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/edt_code"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/edt_bg"
+            android:hint="@string/regist_edt_user_code"
+            android:textColor="@color/black"
+            android:textColorHint="@color/text_hint_color"
+            android:textSize="14sp"
+            android:paddingLeft="20dp" />
+
+        <Button
+            android:id="@+id/btn_code"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_code_bg"
+            android:textSize="12sp"
+            android:text="@string/regist_btn_code"
+            android:textColor="@color/text_gray" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_regist"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/regist_btn_regist"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_regist"
+        android:layout_height="46dp" />
+</LinearLayout>

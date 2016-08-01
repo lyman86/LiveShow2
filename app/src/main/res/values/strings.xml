@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">萤火直播</string>
+
+    <!--Toast-->
+    <string name="toast_login_name">请输入用户名</string>
+    <string name="toast_login_pwd">请输入密码</string>
+    <string name="toast_login_suces">登录成功</string>
+    <string name="toast_regist_correct_phone">请输入正确的手机号</string>
+    <string name="toast_regist_phone">请输入手机号</string>
+    <string name="toast_regist_phone_code_success">验证码发送成功</string>
+    <string name="toast_regist_tips01">账号不能为空</string>
+    <string name="toast_regist_tips02">密码不能为空</string>
+    <string name="toast_regist_tips03">验证码不能为空</string>
+    <string name="toast_regist_tips04">密码长度必须大于6位</string>
+    <string name="toast_regist_tips05">密码长度必须小于20位</string>
+    <string name="regist_sucess">注册成功</string>
+    <string name="modify_sucess">修改成功</string>
+
+    <string name="main_home">首页</string>
+    <string name="main_shop">商城</string>
+    <string name="main_cf">尖客</string>
+    <string name="main_live">直播</string>
+    <string name="main_myinfo">我的</string>
+    <!--登录-->
+    <string name="login_edt_user_name">手机号</string>
+    <string name="login_edt_user_password">输入6位以上密码</string>
+    <string name="login_btn_login">登录</string>
+    <string name="login_tv_reset">忘记密码</string>
+    <string name="login_tv_regist">注册</string>\
+    <string name="login_tv_other">或者采用以下方式登录</string>
+    <string name="login_tv_yll">银利来</string>
+    <string name="login_tv_wx">微信</string>
+    <string name="login_tv_xl">微博</string>
+    <string name="login_tv_qq">QQ</string>
+
+    <!--注册-->
+    <string name="regist_custom_title">手机注册</string>
+    <string name="regist_edt_user_name">请输入手机号码，暂时只支持中国大陆</string>
+    <string name="regist_edt_user_password">请输入密码(6-20位数字或英文)</string>
+    <string name="regist_edt_user_code">请输入验证码</string>
+    <string name="regist_btn_code">获取验证码</string>
+    <string name="regist_btn_regist">注册</string>
+    <string name="crop__pick_error">图片裁剪错误</string>
+
+</resources>

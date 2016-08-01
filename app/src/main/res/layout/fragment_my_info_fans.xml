@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="40dp"
+        android:visibility="gone"
+        android:background="@color/regist_bg"
+        android:text="目前还没有关注用户"
+        android:textSize="20sp"
+        android:layout_height="match_parent" />
+
+    <com.lly.app.liveshow.custom.LoadListView
+        android:id="@id/id_stickynavlayout_innerscrollview"
+        android:layout_width="match_parent"
+        android:divider="@color/text_jj_color"
+        android:dividerHeight="1px"
+        android:paddingBottom="20dp"
+        android:scrollbars="none"
+        android:layout_height="match_parent"
+        android:listSelector="@android:color/transparent"
+        />
+
+</LinearLayout>

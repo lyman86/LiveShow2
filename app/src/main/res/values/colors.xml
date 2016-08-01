@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+
+    <color name="colorPrimaryDark">#303F9F</color>
+
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="regist_bg">#F8F8FF</color>
+
+    <color name="regist_btn">#ffb20c</color>
+
+    <color name="title_bg">#ffffff</color>
+
+    <color name="bg_gray">#E3E3E3</color>
+
+    <color name="view_chat_input">#2f000000</color>
+
+    <color name="view_chat_msg">#7f000000</color>
+
+    <color name="view_chat_bg">#F2ffffff</color>
+
+    <color name="view_chat_gz">#FF1205</color>
+
+    <color name="view_chat_gz2">#CDCDCD</color>
+
+    <color name="view_level">#3FF627</color>
+
+    <color name="view_chat_liverinfo">#5f000000</color>
+
+    <color name="view_startlive">#2fffffff</color>
+
+    <color name="text_gray">#888888</color>
+
+    <color name="text_hint_color">#c7c7c7</color>
+
+    <color name="bg_green">#3ff627</color>
+
+    <color name="color_red">#ff1205</color>
+
+    <color name="more_bg">#808080</color>
+
+    <color name="discover_bg">#f5f5f5</color>
+
+    <color name="write">#ffffff</color>
+    <color name="half_transprent">#66000000</color>
+    <color name="body_color">#f5f8fa</color>
+    <color name="comment_edt_bg">#f5f5f5</color>
+
+
+    <color name="divide_color">#dbdbdb</color>
+    <color name="text_jj_color">#dcdcdc</color>
+
+    <color name="black">#000000</color>
+    <color name="black2">#333333</color>
+    <color name="red">#f00</color>
+    <color name="blue">#0000ff</color>
+    <color name="green">#f0f0</color>
+    <color name="yellow">#ffffff00</color>
+    <color name="gray">#A5AEAD</color>
+    <color name="gray2">#808080</color>
+    <color name="touming">#00000000</color>
+    <color name="line_color">#dcdcdc</color>
+
+    <!--ios弹框-->
+    <color name="ios_trans">#00000000</color>
+    <color name="ios_black">#000000</color>
+    <color name="ios_white">#F1F1F1</color>
+    <color name="ios_alertdialog_line">#c6c6c6</color>
+    <color name="ios_actionsheet_blue">#037BFF</color>
+    <color name="ios_actionsheet_red">#FD4A2E</color>
+    <color name="ios_actionsheet_gray">#8F8F8F</color>
+    <color name="bg_photo">#80000000</color>
+    <color name="red_send">#ff2d47</color>
+    <color name="gray_buyCar">#666666</color>
+    <color name="title_text_bg">#333333</color>
+
+    <color name="edt_bg">#f5f5f5</color>
+
+    <color name="A5">#a5a5a5</color>
+
+
+
+
+
+
+</resources>

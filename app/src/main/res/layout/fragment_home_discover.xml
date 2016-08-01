@@ -1,0 +1,196 @@
+
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lyman="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/swipeLayout"
+    android:layout_height="match_parent"
+    >
+<com.lly.app.liveshow.custom.MyScrollView
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/body_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="35dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:background="@android:color/white"
+            android:layout_height="170dp">
+        <com.lly.app.liveshow.custom.CustomSelectItem
+            android:id="@+id/recomment_selelct"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            lyman:leftTextColorSelect="@android:color/black"
+            lyman:leftTextPaddingLeftSelect="10dp"
+            lyman:leftTextSelect="达人推荐"
+            lyman:leftTextSizeSelect="16sp"
+            lyman:leftTypeSelect="text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/bg_gray" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/gallery_recomment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/white"
+        android:layout_height="wrap_content">
+        <com.lly.app.liveshow.custom.CustomSelectItem
+            android:id="@+id/hot_goods_select"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            lyman:leftTextColorSelect="@android:color/black"
+            lyman:leftTextPaddingLeftSelect="10dp"
+            lyman:leftTextSelect="热门商品"
+            lyman:leftTextSizeSelect="16sp"
+            lyman:leftTypeSelect="text"
+            lyman:rightImagePaddingRightSelect="10dp"
+            lyman:rightImageScale="false"
+            lyman:rightImageSourceSelect="@mipmap/more"
+            lyman:rightSideTextColorSelect="@color/more_bg"
+            lyman:rightSideTextPaddingRightSelect="4dp"
+            lyman:rightSideTextSelect="更多"
+            lyman:rightSideTextSizeSelect="14sp"
+            lyman:rightSideTypeSelect="text"
+            lyman:rightTypeSelect="image" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/bg_gray" />
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/goods_recomment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"></LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/white"
+        android:layout_height="170dp">
+
+        <com.lly.app.liveshow.custom.CustomSelectItem
+            android:id="@+id/hot_pic_select"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            lyman:leftTextColorSelect="@android:color/black"
+            lyman:leftTextPaddingLeftSelect="10dp"
+            lyman:leftTextSelect="热门图片"
+            lyman:leftTextSizeSelect="16sp"
+            lyman:leftTypeSelect="text"
+            lyman:rightImagePaddingRightSelect="10dp"
+            lyman:rightImageScale="false"
+            lyman:rightImageSourceSelect="@mipmap/more"
+            lyman:rightSideTextColorSelect="@color/more_bg"
+            lyman:rightSideTextPaddingRightSelect="4dp"
+            lyman:rightSideTextSelect="更多"
+            lyman:rightSideTextSizeSelect="14sp"
+            lyman:rightSideTypeSelect="text"
+            lyman:rightTypeSelect="image" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="4dp"
+            android:background="@color/bg_gray" />
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/gallery_hot_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"/>
+        </HorizontalScrollView>
+    </LinearLayout>
+        <com.lly.app.liveshow.custom.CustomSelectItem
+            android:id="@+id/video_select"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            lyman:leftTextColorSelect="@android:color/black"
+            lyman:leftTextPaddingLeftSelect="10dp"
+            lyman:leftTextSelect="最新直播"
+            lyman:leftTextSizeSelect="16sp"
+            lyman:leftTypeSelect="text" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@color/bg_gray" />
+
+        <com.lly.app.liveshow.custom.MyGrideView
+            android:id="@+id/gv_video"
+            android:background="@android:color/white"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="5dp"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:gravity="center"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"/>
+    </LinearLayout>
+
+</com.lly.app.liveshow.custom.MyScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

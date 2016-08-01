@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<com.myyll.liveshow.custom.GridViewWithHeaderAndFooter-->
+        <!--android:id="@id/id_stickynavlayout_innerscrollview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:horizontalSpacing="5dp"-->
+        <!--android:listSelector="@android:color/transparent"-->
+        <!--android:numColumns="2"-->
+        <!--android:gravity="center"-->
+        <!--android:scrollbars="none"-->
+        <!--android:stretchMode="columnWidth"-->
+        <!--android:verticalSpacing="5dp"/>-->
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:gravity="top|center_horizontal"
+        android:paddingTop="40dp"
+        android:visibility="gone"
+        android:background="@color/regist_bg"
+        android:text="目前还没有关注用户"
+        android:textSize="20sp"
+        android:layout_height="match_parent" />
+
+        <!--<com.myyll.liveshow.custom.LoadListView-->
+            <!--android:id="@id/id_stickynavlayout_innerscrollview"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:listSelector="@android:color/transparent"-->
+            <!--android:dividerHeight="10dp"-->
+            <!--android:scrollbars="none"-->
+            <!--android:paddingBottom="90dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--&gt;</com.myyll.liveshow.custom.LoadListView>-->
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@id/id_stickynavlayout_innerscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:stick="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+
+    <com.lly.app.liveshow.custom.StickyNavLayout
+    android:layout_width="match_parent"
+    android:id="@+id/sticky_layout"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:background="@color/body_color"
+    stick:isStickNav="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@id/id_stickynavlayout_topview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <include
+            android:id="@+id/layout_top"
+            layout="@layout/include_my_info_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:paddingTop="2dp"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_video_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/red_send"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_pic_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/title_text_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_follow_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/title_text_bg"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_fans_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/title_text_bg"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <com.lly.app.liveshow.custom.SimpleViewPagerIndicator
+        android:id="@id/id_stickynavlayout_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#ffffffff" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@id/id_stickynavlayout_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </com.lly.app.liveshow.custom.StickyNavLayout>
+
+        <View
+            android:id="@+id/bottom_view"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@color/body_color"
+            />
+    </LinearLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <attr name="rightTypeSelect">
+        <enum name="text" value="0" />
+        <enum name="image" value="1" />
+    </attr>
+    <attr name="rightTextColorSelect" format="reference|color" />
+    <attr name="rightTextSizeSelect" format="reference|dimension" />
+    <attr name="rightTextSelect" format="reference|string" />
+    <attr name="rightTextPaddingRightSelect" format="reference|dimension" />
+    <attr name="rightTextPaddingTopSelect" format="reference|dimension" />
+    
+    <attr name="rightImageSourceSelect" format="reference|integer" />
+    <attr name="rightImagePaddingRightSelect" format="reference|dimension" />
+    <attr name="rightImagePaddingTopSelect" format="reference|dimension" />
+    <attr name="rightImageScale" format="boolean"/>
+
+    <attr name="rightSideTypeSelect">
+        <enum name="text" value="0" />
+        <enum name="image" value="1" />
+    </attr>
+    <attr name="rightSideTextColorSelect" format="reference|color" />
+    <attr name="rightSideTextSizeSelect" format="reference|dimension" />
+    <attr name="rightSideTextSelect" format="reference|string" />
+    <attr name="rightSideTextPaddingRightSelect" format="reference|dimension" />
+    <attr name="rightSideTextPaddingTopSelect" format="reference|dimension" />
+    
+    <attr name="rightSideImageSourceSelect" format="reference|integer" />
+    <attr name="rightSideImagePaddingRightSelect" format="reference|dimension" />
+    <attr name="rightSideImagePaddingTopSelect" format="reference|dimension" />
+    <attr name="leftTypeSelect">
+        <enum name="text" value="0" />
+        <enum name="image" value="1" />
+    </attr>
+    <attr name="leftTextColorSelect" format="reference|color" />
+    <attr name="leftTextSizeSelect" format="reference|dimension" />
+    <attr name="leftTextSelect" format="reference|string" />
+    <attr name="leftTextPaddingLeftSelect" format="reference|dimension" />
+    <attr name="leftTextPaddingTopSelect" format="reference|dimension" />
+    
+    <attr name="leftImageSourceSelect" format="reference|integer" />
+    <attr name="leftImagePaddingLeftSelect" format="reference|dimension" />
+    <attr name="leftImagePaddingTopSelect" format="reference|dimension" />
+
+    <attr name="leftSideTypeSelect">
+        <enum name="text" value="0" />
+        <enum name="image" value="1" />
+    </attr>
+    <attr name="leftSideTextColorSelect" format="reference|color" />
+    <attr name="leftSideTextSizeSelect" format="reference|dimension" />
+    <attr name="leftSideTextSelect" format="reference|string" />
+    <attr name="leftSideTextPaddingLeftSelect" format="reference|dimension" />
+    <attr name="leftSideTextPaddingTopSelect" format="reference|dimension" />
+
+    <attr name="leftSideImageSourceSelect" format="reference|integer" />
+    <attr name="leftSideImagePaddingLeftSelect" format="reference|dimension" />
+    <attr name="leftSideImagePaddingTopSelect" format="reference|dimension" />
+
+    <attr name="centerTypeSelect">
+        <enum name="text" value="0" />
+        <enum name="image" value="1" />
+    </attr>
+    <attr name="centerTextColorSelect" format="reference|color" />
+    <attr name="centerTextSizeSelect" format="reference|dimension" />
+    <attr name="centerTextSelect" format="reference|string" />
+    <attr name="centerTextPaddingTopSelect" format="reference|dimension" />
+
+    <attr name="centerImageSourceSelect" format="reference|integer" />
+    <attr name="centerImagePaddingTopSelect" format="reference|dimension" />
+
+    <declare-styleable name="itemView">
+        <attr name="rightTypeSelect" />
+        <attr name="rightSideTypeSelect" />
+        <attr name="leftTypeSelect" />
+        <attr name="leftSideTypeSelect"/>
+        <attr name="centerTypeSelect"/>
+
+        <attr name="leftTextColorSelect" />
+        <attr name="leftTextSizeSelect" />
+        <attr name="leftTextSelect" />
+        <attr name="leftTextPaddingLeftSelect" />
+        <attr name="leftTextPaddingTopSelect"/>
+        
+        <attr name="leftImageSourceSelect" />
+        <attr name="leftImagePaddingLeftSelect" />
+        <attr name="leftImagePaddingTopSelect"/>
+
+        <attr name="leftSideTextColorSelect" />
+        <attr name="leftSideTextSizeSelect" />
+        <attr name="leftSideTextSelect" />
+        <attr name="leftSideTextPaddingLeftSelect" />
+        <attr name="leftSideTextPaddingTopSelect" />
+
+        <attr name="leftSideImageSourceSelect" />
+        <attr name="leftSideImagePaddingLeftSelect" />
+        <attr name="leftSideImagePaddingTopSelect" />
+
+        <attr name="rightTextColorSelect" />
+        <attr name="rightTextSizeSelect" />
+        <attr name="rightTextSelect" />
+        <attr name="rightTextPaddingRightSelect" />
+        <attr name="rightTextPaddingTopSelect"/>
+
+        <attr name="rightImageSourceSelect" />
+        <attr name="rightImagePaddingRightSelect" />
+        <attr name="rightSideImagePaddingTopSelect" />
+        <attr name="rightImagePaddingTopSelect"/>
+        <attr name="rightImageScale"/>
+
+        <attr name="rightSideTextColorSelect" />
+        <attr name="rightSideTextSizeSelect" />
+        <attr name="rightSideTextSelect" />
+        <attr name="rightSideTextPaddingRightSelect" />
+        <attr name="rightSideTextPaddingTopSelect" />
+
+        <attr name="rightSideImageSourceSelect" />
+        <attr name="rightSideImagePaddingRightSelect" />
+
+        <attr name="centerTextColorSelect"/>
+        <attr name="centerTextSizeSelect"/>
+        <attr name="centerTextSelect"/>
+        <attr name="centerTextPaddingTopSelect"/>
+
+        <attr name="centerImageSourceSelect"/>
+        <attr name="centerImagePaddingTopSelect"/>
+    </declare-styleable>
+
+</resources>
