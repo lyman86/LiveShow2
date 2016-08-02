@@ -93,6 +93,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      */
     private void init() {
         initLayout();
+        EventBusSetting();
         initListener();
         processLogic();
 
@@ -296,11 +297,13 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
     /**
      * 关联监听
      */
-    protected abstract void initListener();
+    protected void initListener(){};
 
     /**
      * 逻辑处理
      */
-    protected abstract void processLogic();
+    protected void processLogic(){};
+
+    protected void EventBusSetting(){};
 
 }

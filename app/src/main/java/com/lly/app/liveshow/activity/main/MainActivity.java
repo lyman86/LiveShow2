@@ -1,27 +1,18 @@
 package com.lly.app.liveshow.activity.main;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.lly.app.liveshow.MyApplication;
 import com.lly.app.liveshow.R;
 import com.lly.app.liveshow.activity.main.presenter.MainPresenter;
 import com.lly.app.liveshow.activity.main.presenter.MainPresenterImpl;
 import com.lly.app.liveshow.activity.main.view.MainView;
-import com.lly.app.liveshow.base.BaseActivity;
-import com.lly.app.liveshow.commom.User;
+import com.lly.app.liveshow.base.EventBusActivity;
 import com.lly.app.liveshow.event.EventMessage;
-
 import butterknife.Bind;
-import butterknife.ButterKnife;
-import io.rong.eventbus.EventBus;
 
-public class MainActivity extends BaseActivity implements MainView{
+public class MainActivity extends EventBusActivity implements MainView{
     @Bind(R.id.view)
     View view;
 
@@ -74,6 +65,8 @@ public class MainActivity extends BaseActivity implements MainView{
     private long exitTime = 0;
     private MainPresenter presenter;
 
+
+
     /**
      * 刷新个人信息
      */
@@ -117,14 +110,25 @@ public class MainActivity extends BaseActivity implements MainView{
 
     @Override
     protected void onClickEvent(View paramView) {
-
+        switch (paramView.getId()){
+            case R.id.layout_home:
+                presenter.homeFramentChange();
+                break;
+            case R.id.layout_me:
+                presenter.myinfoFragmentChange();
+                break;
+            case R.id.layout_cf:
+                presenter.fasionFramentChange();
+                break;
+            case R.id.layout_shop:
+                presenter.shopFragmentChange();
+                break;
+        }
     }
 
     @Override
     protected void initLayout() {
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-        EventBus.getDefault().register(this);
     }
 
     @Override
@@ -221,9 +225,4 @@ public class MainActivity extends BaseActivity implements MainView{
         return this;
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        EventBus.getDefault().unregister(this);
-    }
 }
