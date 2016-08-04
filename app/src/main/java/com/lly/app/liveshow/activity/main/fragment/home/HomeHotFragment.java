@@ -1,4 +1,4 @@
-package com.lly.app.liveshow.activity.main.fragment.myinfo;
+package com.lly.app.liveshow.activity.main.fragment.home;
 
 import android.view.View;
 
@@ -6,9 +6,9 @@ import com.lly.app.liveshow.R;
 import com.lly.app.liveshow.base.BaseFragment;
 
 /**
- * Created by luoyan on 16/7/31.
+ * Created by luoyan on 16/8/2.
  */
-public class MyinfoFragment extends BaseFragment {
+public class HomeHotFragment extends BaseFragment{
     @Override
     public void onViewClick(View v) {
 
@@ -16,7 +16,7 @@ public class MyinfoFragment extends BaseFragment {
 
     @Override
     public void setLayout() {
-        layoutId = R.layout.layou4;
+        layoutId = R.layout.fragment_home_hot;
     }
 
     @Override
@@ -28,5 +28,6 @@ public class MyinfoFragment extends BaseFragment {
     public void initListener() {
 
     }
+
 
 }

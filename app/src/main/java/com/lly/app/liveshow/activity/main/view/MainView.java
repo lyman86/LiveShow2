@@ -21,6 +21,8 @@ public interface MainView {
 
     public LinearLayout getLayoutFasion();
 
+    public LinearLayout getBottomTab();
+
     public ImageView getIvVideo();
 
     public ImageView getIvHome();
@@ -31,6 +33,8 @@ public interface MainView {
 
     public ImageView getIvFasion();
 
+    public ImageView getToolBarImg();
+
     public TextView getTvHome();
 
     public TextView getTvMe();
@@ -38,6 +42,7 @@ public interface MainView {
     public TextView getTvShop();
 
     public TextView getTvFasion();
+
 
     public MainActivity getMainActivity();
 

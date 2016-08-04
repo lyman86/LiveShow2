@@ -1,5 +1,6 @@
 package com.lly.app.liveshow.activity.main;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -10,6 +11,9 @@ import com.lly.app.liveshow.activity.main.presenter.MainPresenterImpl;
 import com.lly.app.liveshow.activity.main.view.MainView;
 import com.lly.app.liveshow.base.EventBusActivity;
 import com.lly.app.liveshow.event.EventMessage;
+import com.lly.app.liveshow.utils.L;
+import com.lly.app.liveshow.utils.T;
+
 import butterknife.Bind;
 
 public class MainActivity extends EventBusActivity implements MainView{
@@ -141,7 +145,12 @@ public class MainActivity extends EventBusActivity implements MainView{
     }
 
     public void onEventMainThread(EventMessage eventMessage) {
-        Log.d("onEventMainThread", eventMessage.getMsg() + "   msg");
+        L.d("onEventMainThread", eventMessage.getMsg() + "   msg");
+        if (eventMessage.getMsg().equals(SHOW_BOTTOMTAB)) {
+            presenter.showBottomTab();
+        } else if (eventMessage.getMsg().equals(HIDE_BOTTOMTAB)) {
+            presenter.hideBottomTab();
+        }
 
     }
     @Override
@@ -176,6 +185,11 @@ public class MainActivity extends EventBusActivity implements MainView{
     }
 
     @Override
+    public LinearLayout getBottomTab() {
+        return bottomTab;
+    }
+
+    @Override
     public ImageView getIvVideo() {
         return ivVideo;
     }
@@ -198,6 +212,11 @@ public class MainActivity extends EventBusActivity implements MainView{
     @Override
     public ImageView getIvFasion() {
         return ivCf;
+    }
+
+    @Override
+    public ImageView getToolBarImg() {
+        return toolbarImg;
     }
 
     @Override
@@ -225,4 +244,7 @@ public class MainActivity extends EventBusActivity implements MainView{
         return this;
     }
 
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        return presenter.onKeyDown(keyCode,event);
+    }
 }

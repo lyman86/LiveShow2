@@ -14,6 +14,8 @@ import com.lly.app.liveshow.custom.CustomDialog;
 import com.lly.app.liveshow.utils.window.MyWindow;
 import com.lly.app.liveshow.utils.window.WindowUtil;
 
+import butterknife.ButterKnife;
+
 public abstract class BaseFragment extends Fragment implements OnClickListener{
 	private CustomDialog.Builder builder;
 	private Toast mToast;
@@ -36,9 +38,15 @@ public abstract class BaseFragment extends Fragment implements OnClickListener{
 		super.onViewCreated(view, savedInstanceState);
 		this.view = view;
 		builder = new CustomDialog.Builder(getActivity());
+		ButterKnife.bind(this,view);
+		init();
+
+	}
+
+	private void init() {
 		initView();
 		initListener();
-		initLogic();
+		processLogic();
 	}
 
 	@Override
@@ -47,9 +55,9 @@ public abstract class BaseFragment extends Fragment implements OnClickListener{
 	}
 	public abstract void onViewClick(View v);
 	public abstract void setLayout();
-	public abstract void initView();
-	public abstract void initListener();
-	public abstract void initLogic();
+	public void initView(){}
+	public void initListener(){}
+	public void processLogic(){}
 	public void showProgressDialog() {
 		MyWindow window = WindowUtil.getWindow(BaseFragment.this.getActivity());
 		builder.setDialogLoading(window.winth * 2 / 3, window.height * 1 / 8);
