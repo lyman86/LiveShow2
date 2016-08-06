@@ -1,6 +1,5 @@
 package com.lly.app.liveshow.http;
 
-import com.lly.app.liveshow.commom.OnLoadListener;
 import com.lly.app.liveshow.commom.User;
 
 /**
@@ -23,5 +22,13 @@ public interface MyHttpParams {
      * @param phoneNum
      */
     void postPhoneCodeServe(String phoneNum,String url);
+    /**
+     * 获取首页热门广告
+     */
+    void getHomeHotBannerServe();
+    /**
+     * 获取首页热门内容
+     */
+    void postHomeHotContentServe(int pageid);
 
 }

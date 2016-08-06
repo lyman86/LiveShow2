@@ -57,6 +57,7 @@
         <activity android:name=".activity.main.MainActivity"/>
         <activity android:name=".activity.login.LoginActivity"/>
         <activity android:name=".activity.regist.RegistActivity"/>
+        <activity android:name=".activity.main.WebActivity"/>
     </application>
 
 </manifest>

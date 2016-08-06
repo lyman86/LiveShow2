@@ -53,7 +53,7 @@ public class LoginActivity extends BaseActivity implements LoginView{
     @Override
     protected void initLayout() {
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+
     }
 
     @Override

@@ -1,17 +1,40 @@
 package com.lly.app.liveshow.base;
 
+import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.lly.app.liveshow.R;
+import com.lly.app.liveshow.activity.main.MainActivity;
+import com.lly.app.liveshow.custom.CustomSelectItem;
+import com.lly.app.liveshow.event.EventMessage;
+
+import butterknife.Bind;
+import io.rong.eventbus.EventBus;
+
 /**
  * Created by luoyan on 16/8/4.
  */
-public abstract class BaseWebActivity extends BaseActivity {
+public abstract class BaseWebActivity extends BaseActivity implements CustomSelectItem.OnBarViewClickListener{
+    @Bind(R.id.webview)
     public WebView webView;
+
+    @Bind(R.id.titleBar)
+    public CustomSelectItem title;
+
     @Override
-    protected void processLogic() {
-        super.processLogic();
+    protected void initLayout() {
+        setContentView(R.layout.activity_web);
+    }
+
+    @Override
+    protected void initListener() {
+        title.setOnBarViewClickListener(this);
+    }
+
+    public void webViewSetting(){
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
@@ -42,6 +65,26 @@ public abstract class BaseWebActivity extends BaseActivity {
                 return true;
             }
         });
-
     }
+    @Override
+    public void onBarViewClick(View v, int whitch) {
+        switch (whitch){
+            case CustomSelectItem.LEFT_VIEW:
+                EventBus.getDefault().post(new EventMessage(MainActivity.UPDATE_FOLLOW,-1));
+                finish();
+                break;
+        }
+    }
+
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
+            webView.goBack();
+            return true;
+        }else{
+            finish();
+
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
 }

@@ -69,8 +69,6 @@ public class MainActivity extends EventBusActivity implements MainView{
     private long exitTime = 0;
     private MainPresenter presenter;
 
-
-
     /**
      * 刷新个人信息
      */

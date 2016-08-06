@@ -4,12 +4,14 @@ package com.lly.app.liveshow.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.lly.app.liveshow.R;
 import com.lly.app.liveshow.custom.CustomDialog;
 import com.lly.app.liveshow.utils.window.MyWindow;
 import com.lly.app.liveshow.utils.window.WindowUtil;
@@ -75,6 +77,14 @@ public abstract class BaseFragment extends Fragment implements OnClickListener{
 			mToast.setText(string);
 		}
 		mToast.show();
+	}
+
+	public void configRefreshLayout(SwipeRefreshLayout swipeRefreshLayout){
+		swipeRefreshLayout.setColorSchemeResources(
+				R.color.colorPrimary,
+				R.color.colorAccent,
+				R.color.green);
+		swipeRefreshLayout.setSize(SwipeRefreshLayout.LARGE);
 	}
 
 }

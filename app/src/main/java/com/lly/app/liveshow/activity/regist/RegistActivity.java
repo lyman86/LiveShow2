@@ -65,7 +65,6 @@ public class RegistActivity extends BaseActivity implements RegistView{
     @Override
     protected void initLayout() {
         setContentView(R.layout.activity_regist);
-        ButterKnife.bind(this);
     }
 
     @Override

@@ -16,6 +16,11 @@
     <string name="regist_sucess">注册成功</string>
     <string name="modify_sucess">修改成功</string>
 
+    <string name="check_network">请检查网络</string>
+    <string name="load_all">已加载全部</string>
+    <string name="viedeo_loss">直播飘到火线上去了...</string>
+    <string name="record_loss">回放飘到火线上去了...</string>
+
     <string name="main_home">首页</string>
     <string name="main_shop">商城</string>
     <string name="main_cf">尖客</string>

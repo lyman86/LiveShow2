@@ -35,6 +35,8 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import butterknife.ButterKnife;
+
 
 public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener, DialogInterface.OnClickListener, DialogInterface.OnKeyListener {
 
@@ -72,6 +74,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         }
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+
         builder = new CustomDialog.Builder(this);
         window = WindowUtil.getWindow(this);
         initBundle(paramBundle);
@@ -93,6 +96,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
      */
     private void init() {
         initLayout();
+        ButterKnife.bind(this);
         EventBusSetting();
         initListener();
         processLogic();

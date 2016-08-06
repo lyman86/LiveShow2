@@ -39,11 +39,7 @@ public class BaseWebFragment extends BaseFragment implements SwipeRefreshLayout.
     @Override
     public void initView() {
         super.initView();
-        swipeRefreshLayout.setColorSchemeResources(
-                R.color.colorPrimary,
-                R.color.colorAccent,
-                R.color.green);
-        swipeRefreshLayout.setSize(SwipeRefreshLayout.LARGE);
+        configRefreshLayout(swipeRefreshLayout);
     }
 
     @Override

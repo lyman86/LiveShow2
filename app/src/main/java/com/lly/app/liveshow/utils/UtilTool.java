@@ -2,6 +2,7 @@ package com.lly.app.liveshow.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,8 @@ import android.widget.RelativeLayout;
 
 
 import com.lly.app.liveshow.MyApplication;
+import com.lly.app.liveshow.activity.login.LoginActivity;
+import com.lly.app.liveshow.activity.main.fragment.home.HomeHotFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -170,6 +173,13 @@ public class UtilTool {
 
         return jsonObj;
 
+    }
+
+    public static void startLoginActivity(Activity src){
+        src.startActivity(new Intent(src, LoginActivity.class));
+        SPUtils.put(src, MyApplication.USER_ID,"");
+        SPUtils.put(src,MyApplication.TOKEN,"");
+        src.finish();
     }
 
 

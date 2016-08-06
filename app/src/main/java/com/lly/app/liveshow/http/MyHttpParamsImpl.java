@@ -11,6 +11,7 @@ import com.lly.app.liveshow.commom.User;
 import com.lly.app.liveshow.http.url.RequestUrl;
 import com.lly.app.liveshow.utils.JsonUtil;
 import com.lly.app.liveshow.utils.L;
+import com.lly.app.liveshow.utils.UtilTool;
 
 import org.json.JSONObject;
 import org.kymjs.kjframe.KJHttp;
@@ -144,4 +145,63 @@ public class MyHttpParamsImpl implements MyHttpParams {
         kjHttp=null;
         jsonObject=null;
     }
+
+    /**
+     * 获取首页热门广告
+     */
+    @Override
+    public void getHomeHotBannerServe() {
+        requestVo.requestUrl =RequestUrl.YLL_ADS;
+        kjHttp.get(RequestUrl.YLL_ADS, new HttpCallBack() {
+            @Override
+            public void onSuccess(String t) {
+                requestVo.sucess = true;
+                requestVo.resObj = t;
+                onLoadListener.loadStatus(requestVo);
+            }
+            @Override
+            public void onFailure(int errorNo, String strMsg) {
+                requestVo.sucess = false;
+                requestVo.erroMsg = strMsg;
+                requestVo.erroNo = errorNo;
+                onLoadListener.loadStatus(requestVo);
+            }
+        });
+        kjHttp = null;
+    }
+
+    /**
+     * 获取首页热门内容
+     */
+    @Override
+    public void postHomeHotContentServe(int pageid) {
+        try{
+            jsonObject.put("userAuth", UtilTool.getJSONO_userAuth(context));
+            jsonObject.put("pageid",pageid);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        params.put("json",jsonObject.toString());
+        requestVo.requestUrl =RequestUrl.YLL_HOME_HOT;
+        kjHttp.post(RequestUrl.YLL_HOME_HOT, params, new HttpCallBack() {
+            @Override
+            public void onSuccess(String t) {
+                requestVo.sucess = true;
+                requestVo.resObj = t;
+                onLoadListener.loadStatus(requestVo);
+            }
+            @Override
+            public void onFailure(int errorNo, String strMsg) {
+                requestVo.sucess = false;
+                requestVo.erroMsg = strMsg;
+                requestVo.erroNo = errorNo;
+                onLoadListener.loadStatus(requestVo);
+            }
+        });
+        kjHttp = null;
+        params = null;
+        jsonObject = null;
+    }
+
+
 }

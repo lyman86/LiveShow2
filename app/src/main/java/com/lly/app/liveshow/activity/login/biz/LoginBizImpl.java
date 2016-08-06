@@ -1,18 +1,11 @@
 package com.lly.app.liveshow.activity.login.biz;
-
-
-import android.content.Context;
 import android.text.TextUtils;
-
 import com.lly.app.liveshow.R;
 import com.lly.app.liveshow.activity.login.LoginActivity;
-import com.lly.app.liveshow.activity.login.model.LoginModel;
 import com.lly.app.liveshow.commom.OnLoadListener;
-import com.lly.app.liveshow.commom.RequestVo;
 import com.lly.app.liveshow.commom.User;
 import com.lly.app.liveshow.http.MyHttpParams;
 import com.lly.app.liveshow.http.MyHttpParamsImpl;
-import com.lly.app.liveshow.utils.L;
 import com.lly.app.liveshow.utils.T;
 
 /**
