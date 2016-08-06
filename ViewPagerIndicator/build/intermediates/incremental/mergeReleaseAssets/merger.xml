@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="/Users/luoyan/AndroidStudioProjects/YLL2/LiveShow2/ViewPagerIndicator/src/main/assets"/><source path="/Users/luoyan/AndroidStudioProjects/YLL2/LiveShow2/ViewPagerIndicator/build/generated/assets/shaders/release"/></dataSet><dataSet config="release"><source path="/Users/luoyan/AndroidStudioProjects/YLL2/LiveShow2/ViewPagerIndicator/src/release/assets"/></dataSet></merger>
